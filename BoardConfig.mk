@@ -24,7 +24,7 @@ endif
 BOARD_USES_GENERIC_AUDIO := true
 USE_CAMERA_STUB := true
 
--include $(QCPATH)/common/msm8909/BoardConfigVendor.mk
+-include $(QCPATH)/common/msm8909_LMT/BoardConfigVendor.mk
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 #TODO: Fix-me: Setting TARGET_HAVE_HDMI_OUT to false
 # to get rid of compilation error.
@@ -79,7 +79,7 @@ BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk
 BOARD_KERNEL_SEPARATED_DT := true
 
-BOARD_EGL_CFG := device/qcom/msm8909/egl.cfg
+BOARD_EGL_CFG := device/qcom/msm8909_LMT/egl.cfg
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x01000000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x01000000
@@ -104,7 +104,7 @@ TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_msm
 TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 
-#Add support for firmare upgrade on msm8909
+#Add support for firmare upgrade on msm8909_LMT
 HAVE_SYNAPTICS_I2C_RMI4_FW_UPGRADE := true
 
 TARGET_LDPRELOAD := libNimsWrap.so

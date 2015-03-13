@@ -1,5 +1,5 @@
 #
-# system.prop for msm8909
+# system.prop for msm8909_LMT
 #
 
 #rild.libpath=/system/lib/libreference-ril.so
@@ -112,7 +112,7 @@ ro.qc.sdk.audio.fluencetype=none
 persist.audio.fluence.voicecall=true
 persist.audio.fluence.voicerec=false
 persist.audio.fluence.speaker=true
-#Set for msm8909
+#Set for msm8909_LMT
 tunnel.audio.encode = false
 ro.config.low_ram=false
 #Buffer size in kbytes for compress offload playback

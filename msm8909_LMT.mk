@@ -1,7 +1,7 @@
-DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8909/overlay
+DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8909_LMT/overlay
 
 TARGET_USES_QCOM_BSP := true
-ifeq ($(TARGET_PRODUCT),msm8909)
+ifeq ($(TARGET_PRODUCT),msm8909_LMT)
 TARGET_USES_QCA_NFC := true
 endif
 ifeq ($(TARGET_USES_QCOM_BSP), true)
@@ -13,16 +13,16 @@ endif #TARGET_USES_QCOM_BSP
 #QTIC flag
 -include $(QCPATH)/common/config/qtic-config.mk
 
-# media_profiles and media_codecs xmls for msm8909
+# media_profiles and media_codecs xmls for msm8909_LMT
 ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
-PRODUCT_COPY_FILES += device/qcom/msm8909/media/media_profiles_8909.xml:system/etc/media_profiles.xml \
-                      device/qcom/msm8909/media/media_codecs_8909.xml:system/etc/media_codecs.xml
+PRODUCT_COPY_FILES += device/qcom/msm8909_LMT/media/media_profiles_8909.xml:system/etc/media_profiles.xml \
+                      device/qcom/msm8909_LMT/media/media_codecs_8909.xml:system/etc/media_codecs.xml
 endif
 
 $(call inherit-product, device/qcom/common/common.mk)
 
-PRODUCT_NAME := msm8909
-PRODUCT_DEVICE := msm8909
+PRODUCT_NAME := msm8909_LMT
+PRODUCT_DEVICE := msm8909_LMT
 
 # font rendering engine feature switch
 -include $(QCPATH)/common/config/rendering-engine.mk
@@ -35,17 +35,17 @@ PRODUCT_PACKAGES += libGLES_android
 
 # Audio configuration file
 PRODUCT_COPY_FILES += \
-    device/qcom/msm8909/audio_policy.conf:system/etc/audio_policy.conf \
-    device/qcom/msm8909/audio_effects.conf:system/vendor/etc/audio_effects.conf \
-    device/qcom/msm8909/mixer_paths_qrd_skuh.xml:system/etc/mixer_paths_qrd_skuh.xml \
-    device/qcom/msm8909/mixer_paths_qrd_skui.xml:system/etc/mixer_paths_qrd_skui.xml \
-    device/qcom/msm8909/mixer_paths.xml:system/etc/mixer_paths.xml \
-    device/qcom/msm8909/mixer_paths_msm8909_pm8916.xml:system/etc/mixer_paths_msm8909_pm8916.xml \
-    device/qcom/msm8909/mixer_paths_skua.xml:system/etc/mixer_paths_skua.xml \
-    device/qcom/msm8909/mixer_paths_skuc.xml:system/etc/mixer_paths_skuc.xml \
-    device/qcom/msm8909/mixer_paths_skue.xml:system/etc/mixer_paths_skue.xml \
-    device/qcom/msm8909/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
-    device/qcom/msm8909/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml
+    device/qcom/msm8909_LMT/audio_policy.conf:system/etc/audio_policy.conf \
+    device/qcom/msm8909_LMT/audio_effects.conf:system/vendor/etc/audio_effects.conf \
+    device/qcom/msm8909_LMT/mixer_paths_qrd_skuh.xml:system/etc/mixer_paths_qrd_skuh.xml \
+    device/qcom/msm8909_LMT/mixer_paths_qrd_skui.xml:system/etc/mixer_paths_qrd_skui.xml \
+    device/qcom/msm8909_LMT/mixer_paths.xml:system/etc/mixer_paths.xml \
+    device/qcom/msm8909_LMT/mixer_paths_msm8909_pm8916.xml:system/etc/mixer_paths_msm8909_pm8916.xml \
+    device/qcom/msm8909_LMT/mixer_paths_skua.xml:system/etc/mixer_paths_skua.xml \
+    device/qcom/msm8909_LMT/mixer_paths_skuc.xml:system/etc/mixer_paths_skuc.xml \
+    device/qcom/msm8909_LMT/mixer_paths_skue.xml:system/etc/mixer_paths_skue.xml \
+    device/qcom/msm8909_LMT/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
+    device/qcom/msm8909_LMT/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml
 
 # NFC packages
 ifeq ($(TARGET_USES_QCA_NFC),true)
@@ -97,9 +97,9 @@ PRODUCT_BOOT_JARS += qcmediaplayer \
 
 # Listen configuration file
 PRODUCT_COPY_FILES += \
-    device/qcom/msm8909/listen_platform_info.xml:system/etc/listen_platform_info.xml
+    device/qcom/msm8909_LMT/listen_platform_info.xml:system/etc/listen_platform_info.xml
 
-# Feature definition files for msm8909
+# Feature definition files for msm8909_LMT
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml \
@@ -124,9 +124,9 @@ PRODUCT_PACKAGES += wcnss_service
 
 #wlan driver
 PRODUCT_COPY_FILES += \
-    device/qcom/msm8909/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
-    device/qcom/msm8909/WCNSS_wlan_dictionary.dat:persist/WCNSS_wlan_dictionary.dat \
-    device/qcom/msm8909/WCNSS_qcom_wlan_nv.bin:persist/WCNSS_qcom_wlan_nv.bin
+    device/qcom/msm8909_LMT/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
+    device/qcom/msm8909_LMT/WCNSS_wlan_dictionary.dat:persist/WCNSS_wlan_dictionary.dat \
+    device/qcom/msm8909_LMT/WCNSS_qcom_wlan_nv.bin:persist/WCNSS_qcom_wlan_nv.bin
 
 PRODUCT_PACKAGES += \
     wpa_supplicant_overlay.conf \
