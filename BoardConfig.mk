@@ -120,3 +120,7 @@ TARGET_HW_DISK_ENCRYPTION := true
 
 #Disable IMS on lean & mean targets
 TARGET_USES_IMS := false
+
+#Disable NFC
+TARGET_USES_QCA_NFC := false
+TARGET_ENABLE_SMARTCARD_SERVICE := false
