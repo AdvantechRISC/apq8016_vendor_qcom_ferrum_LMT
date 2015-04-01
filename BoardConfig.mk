@@ -117,3 +117,6 @@ MALLOC_IMPL := dlmalloc
 
 #Enable HW based full disk encryption
 TARGET_HW_DISK_ENCRYPTION := true
+
+#Disable IMS on lean & mean targets
+TARGET_USES_IMS := false
