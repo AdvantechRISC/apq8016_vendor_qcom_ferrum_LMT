@@ -174,3 +174,6 @@ ro.sys.fw.trim_enable_memory=1073741824
 
 # Enable memory optimizations
 ro.lean=true
+
+#save memory property for camera daemon
+cameradaemon.SaveMemAtBoot=1
