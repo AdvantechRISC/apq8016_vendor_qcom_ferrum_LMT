@@ -29,6 +29,3 @@ TARGET_ENABLE_SMARTCARD_SERVICE := false
 #Disable SVA listen app
 AUDIO_FEATURE_ENABLED_LISTEN := false
 BOARD_SUPPORTS_SOUND_TRIGGER := false
-
-#Disable CNE services
-BOARD_USES_QCNE := false
